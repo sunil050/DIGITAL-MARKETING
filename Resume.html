@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resume practice</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- Splide.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/css/splide.min.css">
+  </head>
+  <body>
+    <nav>
+      <div class="nav_head">
+      <div>
+        <img class="logo_part" src="./Assets/Logo_Clr.webp" alt="logo" />
+      </div>
+      <div>
+        <button class="contact-btn">contact</button>
+      </div>
+      </div>
+    </nav>
+    <section class="banner-content">
+      <div class="container">
+        <div class="services-icons">
+          <h1 class="services-offer">
+            <spam style="color: #eb6335"
+              >DIGITAL MARKETING
+              <spam style="color: #27282c"> SERVICES INQUIRY FORM </spam>
+            </spam>
+          </h1>
+        </div>
+      </div>
+    </section>
+    <div class="small_content_ban">
+      <p id="form_fill">
+        Before we get started, we would like to know more about your
+        requirements and types of services you need to assign your contact to
+        one of our Subject-Matter-Experts.
+      </p>
+    </div>
+    <section class="banner-sec">
+      <div class="container">
+        <div class="banner_ground">
+          <div class="banner-image">
+            <img src="./Assets/Group 2110.jpg" alt="Image" />
+          </div>
+          <div class="make_form">
+            <div class="form_section">
+              <form id="banner_form" class="banner_form" method="post">
+                <div class="field_groups">
+                  <input
+                    type="text"
+                    id="company_name"
+                    name="company_name"
+                    autocomplete="off"
+                    onkeypress="return companymain();"
+                    onpaste="return false;"
+                    placeholder="company name"
+                  />
+                </div>
+                <div class="field_groups">
+                  <select
+                    id="budget"
+                    placeholder="Monthly Marketing Budget"
+                    class="budgets placeholder-shown"
+                    onchange="return validatesel()"
+                  >
+                    <option value selected>Monthly Marketing Budget</option>
+                    <option value="270">Less Then Rs 2L</option>
+                  </select>
+                </div>
+                <div class="field_groups">
+                  <input
+                    type="text"
+                    id="firstname"
+                    autocomplete="off"
+                    onkeypress="return validate(event);"
+                    onpaste="return false;"
+                    placeholder="Name"
+                  />
+                </div>
+                <div class="field_groups">
+                  <input
+                    type="text"
+                    id="phone"
+                    name="phonenumber"
+                    autocomplete="off"
+                    maxlength="10"
+                    onkeypress="return IsNumeric();"
+                    onpaste="return false;"
+                    placeholder="Phone Number"
+                  />
+                </div>
+                <div class="field_groups">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="off"
+                    onkeypress="validateEmail();"
+                    onpaste="return false;"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="field_groups">
+                  <select
+                    id="services_idd"
+                    placeholder="Choose the service"
+                    class="Services placeholder-shown"
+                    onchange="return validatesel()"
+                  >
+                    <option value selected>choose the Service</option>
+                    <option value="275">SEO & Content</option>
+                    <option value="276">Paid Search</option>
+                    <option value="277">Marketplace Management</option>
+                    <option value="278">
+                      Social Media/Influencer Marketing
+                    </option>
+                    <option value="279">Account-Based Marketing</option>
+                    <option value="280">Programmatic Ads</option>
+                    <option value="281">CRO & Marketing Automation</option>
+                    <option value="282">Website Design & Development</option>
+                    <option value="283">Creatives & Videos</option>
+                    <option value="285">Hyperlocal Marketing</option>
+                    <option value="284">Digital Marketing Services</option>
+                  </select>
+                </div>
+                <div class="field_groups">
+                  <input
+                    type="text"
+                    id="designation"
+                    name="designation"
+                    autocomplete="off"
+                    onkeypress="return des();"
+                    onpaste="return false;"
+                    placeholder="Designation"
+                  />
+                </div>
+                <div class="submit">
+                  <input type="submit" class="formsubmit" />
+                </div>
+              </form>
+              <div class="market-logo">
+                <ul>
+                  <li>
+                    <img src="./Assets/MBTPARTNER.jpg" alt="logo-1" />
+                  </li>
+                  <li>
+                    <img src="./Assets/amazon.jpg" alt="logo-2" />
+                  </li>
+                  <li>
+                    <img src="./Assets/IDMA.jpg" alt="logo-3" />
+                  </li>
+                  <li>
+                    <img
+                      src="./Assets/Marketing-Partners-logo-H-v03.jpg"
+                      alt="logo-4"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="./Assets/MBP_Badge_-_Light_backgrounds_1x.jpg"
+                      alt="logo-5"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="logo-slide">
+      <div class="container">
+        <div class="services_icons">
+          <h2 class="services_offer">
+            <spam style="color: #eb6335">OUR HAPPY</spam>
+            <spam style="color: #27282c">CLIENTS</spam>
+          </h2>
+        </div>
+      </div>
+        <div class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <!-- Carousel items will be dynamically loaded here -->
+              <li class="splide__slide">
+                <img src="./Assets/chutenegfy-n.png" alt="" >
+              </li>
+              <li class="splide__slide">
+                <img src="./Assets/field-n.png" alt="" >
+              </li>
+              <li class="splide__slide">
+                <img src="./Assets/florra-n.png" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./Assets/kerala-n.png" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./Assets/lodo-n.png" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./Assets/logo1-n.png" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./Assets/logo-2-n.png" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./Assets/logo4-n.png" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./Assets/LOGO-dark-n.png" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./Assets/optica-n.png" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./Assets/tcs_re-n.png" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./Assets/sortingtax-n.png" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./Assets/kalm.png" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./Assets/app.png" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./Assets/mu-sigma-n.png" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./Assets/Logo-Hi-Res-01-n.png" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="./Assets/lotus-n.png" alt="">
+              </li>
+              <!-- Add more items as needed -->
+            </ul>
+          </div>
+      </div>
+    </section>
+    <section id="services_id">
+      <div class="container">
+        <div class="services_icons">
+          <h2 class="services_offer">
+            OUR
+            <span style="color: #27282c">SERVICES</span>
+            </h2>
+          <p class="services-para">Neil Patel Digital India offers a wide range of solutions. We pride ourselves for our expertise on search engines, social media, content advocacy, graphics & videos, and various other micro services.</p>
+          <div class="icons_grid">
+            <div class="list_grid">
+              <div class="icons_images_grid">
+                <img src="./Assets/Website-Icons-02.png" alt="icon">
+              </div>
+                <div class="content_icons">
+                  <p>
+                    search engine<br>
+                    optimisation
+                  </p>
+                  <div class="line_show"></div>
+                  <div class="line_show_left"></div>
+                </div>
+            </div>
+            <div class="list_grid">
+              <div class="icons_images_grid">
+                <img src="./Assets/Paid-Media.png" alt="icon">
+              </div>
+                <div class="content_icons">
+                  <p class="content-ser">
+                    Paied Search<br>
+                    Marketing
+                  </p>
+                  <div class="line_show"></div>
+                  <div class="line_show_left"></div>
+                </div>
+              
+            </div>
+            <div class="list_grid">
+              <div class="icons_images_grid">
+                <img src="./Assets/Marketplace.png" alt="icon">
+              </div>
+                <div class="content_icons">
+                  <p class=""content-ser>
+                    Marketplace<br>
+                    optimisation
+                  </p>
+                  <div class="line_show"></div>
+                  <div class="line_show_left"></div>
+                </div>
+              
+            </div>
+            <div class="list_grid last-child1">
+              <div class="icons_images_grid">
+                <img src="./Assets/Social-Media.png" alt="icon">
+              </div>
+                <div class="content_icons">
+                  <p class="ser">
+                    Social Media<br>
+                    Marketing
+                  </p>
+                  <div class="line_show"></div>
+                  <div class="line_show_left"></div>
+                </div>
+              
+            </div>
+            <div class="list_grid list-child-mob">
+              <div class="icons_images_grid">
+                <img src="./Assets/ux.png" alt="icon">
+              </div>
+                <div class="content_icons">
+                  <p>
+                    UI & UX Design<br>
+                    & Development
+                  </p>
+                  <div class="line_show"></div>
+                  <div class="line_show_left left-mob"></div>
+                </div>
+              
+            </div>
+            <div class="list_grid list-child-mob">
+              <div class="icons_images_grid">
+                <img src="./Assets/target.png" alt="icon">
+              </div>
+                <div class="content_icons">
+                  <p>
+                    Account-Based<br>
+                    Marketing
+                  </p>
+                  <div class="line_show"></div>
+                  <div class="line_show_left left-mob"></div>
+                </div>
+              
+            </div>
+            <div class="list_grid last-child-mob">
+              <div class="icons_images_grid">
+                <img src="./Assets/marketing-automation.png" alt="icon">
+              </div>
+                <div class="content_icons">
+                  <p>
+                    Programmatic<br>
+                    Advertising
+                  </p>
+                  <div class="line_show"></div>
+                  
+                </div>
+              
+            </div>
+
+            <div class="list_grid last-child1">
+              <div class="icons_images_grid">
+                 <img src="./Assets/Cro.png" alt="icon">
+              </div>
+                <div class="content_icons">
+                  <p class="content-ser">
+                    CRO & Marketing<br>
+                    Automation
+                  </p>
+                  <div class="line_show"></div>
+                  
+                </div>
+           </div>
+
+          <div class="services_discussion">
+            <a href="#form_fill">REQUEST CONSULTATION</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="services_section1" style="background-color: #fff;">
+      <div class="row">
+        <div class="container">
+          <div class="services_inner_section">
+            <div class="services_icons">
+              <h2 class="services_offer" style="margin-bottom: 0 !important;">
+                OUR
+                <span style="color: #27282c;">AWARDS</span>
+              </h2>
+            </div>
+            <div class="small_content_ban1" style="text-align: center;">
+              <p>Neil Patel Digital India offers a wide range of solutions. We pride ourselves for our expertise on search engines, social media, content advocacy, graphics & videos, and various other micro services.</p>
+            </div>
+            <div class="ser_grid" id="list_show">
+              <div class="Total_cards">
+                <div class="grid_f list_li">
+                  <div class="effect-sadie">
+                    <img src="./Assets/aw1.png" class="try" alt="iamai">
+                    <figcaption>
+                      <div class="card_content">
+                        <p>Best search marketing campaign by IAMAI for the year 2022</p>
+                      </div>
+                    </figcaption>
+                  </div>
+                </div>
+                <div class="grid_f list_li">
+                  <div class="effect-sadie">
+                    <img src="./Assets/aw2.png" class="try" alt="iamai">
+                    <figcaption>
+                      <div class="card_content">
+                        <p>Use of search marketing/paid search by DG+ Awards for the year 2022</p>
+                      </div>
+                    </figcaption>
+                  </div>
+                </div>
+                <div class="grid_f list_li">
+                  <div class="effect-sadie">
+                    <img src="./Assets/aw3.png" class="try" alt="iamai">
+                    <figcaption>
+                      <div class="card_content">
+                        <p>2021 performance marketing agency of the year</p>
+                      </div>
+                    </figcaption>
+                  </div>
+                </div>
+                <div class="grid_f list_li">
+                  <div class="effect-sadie">
+                    <img src="./Assets/aw4.png" class="try" alt="iamai">
+                    <figcaption>
+                      <div class="card_content">
+                        <p>Landed in the top 10% for 2022, making the list for 2nd consecutive year</p>
+                      </div>
+                    </figcaption>
+                  </div>
+                </div>
+                <div class="grid_f list_li">
+                  <div class="effect-sadie">
+                    <img src="./Assets/aw5.png" class="try" alt="iamai">
+                    <figcaption>
+                      <div class="card_content">
+                        <p>Awarded for best programmatic Ad campaign by E4M for the year 2022</p>
+                      </div>
+                    </figcaption>
+                  </div>
+                </div>
+                <div class="grid_f list_li">
+                  <div class="effect-sadie">
+                    <img src="./Assets/aw6.png" class="try" alt="iamai">
+                    <figcaption>
+                      <div class="card_content">
+                        <p>2022: #1 fastest growing company with +500 employees,#2 with +200 employees.</p>
+                      </div>
+                    </figcaption>
+                  </div>
+                </div>
+                <div class="grid_f list_li">
+                  <div class="effect-sadie">
+                    <img src="./Assets/aw7.png" class="try" alt="iamai">
+                    <figcaption>
+                      <div class="card_content">
+                        <p>1 of only 475 to make Inc's best workplaces list for 2022</p>
+                      </div>
+                    </figcaption>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="make_issues" id="footer_form">
+      <div class="container">
+        <div class="make_is">
+          <div class="make_content">
+            <h3>
+              <span style="color: #000;">Your Business Deserves
+                <br>
+                To Be In The Spotlight!
+                <br>
+              </span>
+              Sail Through Success
+              <br>
+              With Neil Patel Digital India
+            </h3>
+            <div class="image_arrow">
+              <img src="./Assets/whitearrow.png">
+            </div>
+          </div>
+          <div class="make_form"></div>
+        </div>
+      </div>
+       <div class="container">
+          <div class="make_form">
+            <div class="form_section1">
+              <form id="banner_form" class="banner_form" method="post">
+                <div class="field_groups">
+                  <input
+                    type="text"
+                    id="company_name"
+                    name="company_name"
+                    autocomplete="off"
+                    onkeypress="return companymain();"
+                    onpaste="return false;"
+                    placeholder="company name"
+                  />
+                </div>
+                <div class="field_groups">
+                  <select
+                    id="budget"
+                    placeholder="Monthly Marketing Budget"
+                    class="budgets placeholder-shown"
+                    onchange="return validatesel()"
+                  >
+                    <option value selected>Monthly Marketing Budget</option>
+                    <option value="270">Less Then Rs 2L</option>
+                  </select>
+                </div>
+                <div class="field_groups">
+                  <input
+                    type="text"
+                    id="firstname"
+                    autocomplete="off"
+                    onkeypress="return validate(event);"
+                    onpaste="return false;"
+                    placeholder="Name"
+                  />
+                </div>
+                <div class="field_groups">
+                  <input
+                    type="text"
+                    id="phone"
+                    name="phonenumber"
+                    autocomplete="off"
+                    maxlength="10"
+                    onkeypress="return IsNumeric();"
+                    onpaste="return false;"
+                    placeholder="Phone Number"
+                  />
+                </div>
+                <div class="field_groups">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="off"
+                    onkeypress="validateEmail();"
+                    onpaste="return false;"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="field_groups">
+                  <select
+                    id="services_idd"
+                    placeholder="Choose the service"
+                    class="Services placeholder-shown"
+                    onchange="return validatesel()"
+                  >
+                    <option value selected>choose the Service</option>
+                    <option value="275">SEO & Content</option>
+                    <option value="276">Paid Search</option>
+                    <option value="277">Marketplace Management</option>
+                    <option value="278">
+                      Social Media/Influencer Marketing
+                    </option>
+                    <option value="279">Account-Based Marketing</option>
+                    <option value="280">Programmatic Ads</option>
+                    <option value="281">CRO & Marketing Automation</option>
+                    <option value="282">Website Design & Development</option>
+                    <option value="283">Creatives & Videos</option>
+                    <option value="285">Hyperlocal Marketing</option>
+                    <option value="284">Digital Marketing Services</option>
+                  </select>
+                </div>
+                <div class="field_groups">
+                  <input
+                    type="text"
+                    id="designation"
+                    name="designation"
+                    autocomplete="off"
+                    onkeypress="return des();"
+                    onpaste="return false;"
+                    placeholder="Designation"
+                  />
+                </div>
+                <div class="submit">
+                  <input type="submit" class="formsubmit1" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      
+    </section>
+    <section class="footer-section">
+      <div class="container">
+          <div class="copy-right">
+              <p><span style="color:#fff;">@</span><span style="color:#EB6335">2023 NP DIGITAL</span><span style="color:#fff;">.</span> <span style="color:#fff;">All Right Reserved.</span></p>
+          </div>
+      </div>
+  </section>
+    <!-- Splide.js JavaScript (including dependencies) -->
+    <script src="./scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
+  </body>
+</html>
